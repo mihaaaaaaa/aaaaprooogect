@@ -1,0 +1,53 @@
+	body, h1, h2, h3, h4, a, p {
+	margin: 0;
+	font-family: "Trebuchet MS";
+}
+
+body {
+	background-color: black;
+}
+
+* {
+	box-sizing: border-box;
+	transform:1.2;
+}
+
+
+.content {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.content-first-img{
+	background-image: url(../img/fon1.png);
+	height:200px;
+	width: 100%;
+	max-width: 1000px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: flex;
+	align-items: center;
+	margin-bottom: 50vh;
+}
+
+.content-first-btn{
+ border: 2px solid red ;
+ border-radius: 20px;
+ height: 5vw;
+ width: 20%;
+ margin-left: 40%;
+ color: red;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition:.3s;
+}
+
+.content-first-btn:hover {
+	color: green;
+	font-size: 25px;
+}
+
+.content-first{
+	height: 100vh;
+}

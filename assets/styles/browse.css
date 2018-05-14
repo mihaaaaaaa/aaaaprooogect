@@ -1,0 +1,94 @@
+body, h1, h2, h3, h4, a, p {
+	margin: 0;
+	font-family: "Trebuchet MS";
+}
+
+header {
+	height: 60px;
+	padding:5px 40px 0 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 3px solid #ccc;
+}
+
+.header-left{
+	display: flex;
+	align-items: center;
+}
+
+.header-logo {
+	background-repeat: no-repeat;
+	width: 10%;
+}
+
+.header-right{
+
+}
+
+.item-list-name{
+	border: 2px solid red;
+	font-size: 35px;
+	padding-left: 80px;
+	margin-bottom: 35px;
+	background-color: #53ea93;
+}
+
+.item-list{
+	border: 2px solid #ccc;
+	background-color: ;
+	margin: 20px 20px 20px 20px; 
+}
+
+.item{
+	display: inline-block;
+	width: 5%;
+	height: 5vh;
+	min-width:200px;
+	border: 2px solid #ccc;
+	border-radius: 7px;
+	margin:0 50px 35px 50px;
+	padding-top: 80px;
+}
+
+.item:hover{
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.items-icon {
+	justify-content: center;
+	background-size: cover;
+	padding:0 40px 10px 10px;
+	background-repeat: no-repeat;
+	width: 45px;
+	margin: 0 0 10% 20%;
+}
+
+.items-name{
+	margin: 0 0 10% 5%;
+	font-size: 23px;
+}
+
+.items-ID{
+	margin-left: 5%; 
+	font-size: 20px;
+}
+
+.scrol-up{
+	position: absolute;
+	right: 20px;
+	bottom: 50px;
+	width:80px ;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-image: url(../img/scrol-up.png);
+	background-color:#53ea93; 
+}
+
+@media screen and (min-width:768px) {
+	.item{
+		height: 20vh;
+	}
+}
