@@ -59,5 +59,16 @@ $(document).ready(function() {
 		weaponsBlock.append('<div class="item"><img class="items-icon" src="' + weapons[i].img + '"><div class="items-name">' + weapons[i].name +'</div><div class="items-ID">' + weapons[i].id + '</div></div>')
 	};
 
-	 // $('<div class="modal"></div>').appendTo('body').modal();
+
+	$('.item').click(function($index) {
+		let currentItem = $(this).index() - 1;
+		let item = weapons[currentItem];
+
+		$('<div class="modal"><div class="items-name">' + item.name + '</div><div class="items-icon"><img src="' + item.img +'"></div><div class="stats"><div class="id">' + item.id +'</div><div class="damage">' + item.damage +'</div><div class="cooldown">' + item.cooldown +'</div><div class="durability">' + item.durability +'</div><div class="enchantment">' + item.enchantment +'</div></div><div class="craft"></div></div>').appendTo('body').modal();
+	})
+
+
+
+
+	//$.inArray( , weapons);
 });
