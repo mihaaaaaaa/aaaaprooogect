@@ -14,7 +14,7 @@ $(document).ready(function() {
 			kraft:""
 		},
 		{
-			name: "Деревяный Меч",
+			name: "Деревянный Меч",
 			img: "assets/img/items/268-0.png",
 			id: "268-0",
 			damage: 4,
@@ -24,7 +24,7 @@ $(document).ready(function() {
 			kraft:""
 		},
 		{
-			name: "Каменый Меч",
+			name: "Каменный Меч",
 			img: "assets/img/items/272-0.png",
 			id: "272-0",
 			damage: 5,
@@ -40,6 +40,16 @@ $(document).ready(function() {
 			damage: 6 ,
 			cooldown: 2 ,
 			durability: 385 ,
+			enchantment:"Сила,Откидывание,Горящая стрела,Бесконечность",
+			kraft:""
+		},
+		{
+			name: "Золотой Меч",
+			img: "assets/img/items/283-0.png",
+			id: "283-0",
+			damage: 4,
+			cooldown: 2,
+			durability: 385,
 			enchantment:"Сила,Откидывание,Горящая стрела,Бесконечность",
 			kraft:""
 		},
@@ -67,8 +77,16 @@ $(document).ready(function() {
 		$('<div class="modal"><div class="items-name">' + item.name + '</div><div class="items-icon"><img src="' + item.img +'"></div><div class="stats"><div class="id">' + item.id +'</div><div class="damage">' + item.damage +'</div><div class="cooldown">' + item.cooldown +'</div><div class="durability">' + item.durability +'</div><div class="enchantment">' + item.enchantment +'</div></div><div class="craft"></div></div>').appendTo('body').modal();
 	})
 
-
-
+	$('.header-btn').click(function(){
+		var x = document.getElementById("search").value;
+			for(var i = 0; i < weapons.length; i++) {
+				if(weapons[i].name == x) {
+					let item = weapons[i];
+					$('<div class="modal"><div class="items-name">' + item.name + '</div><div class="items-icon"><img src="' + item.img +'"></div><div class="stats"><div class="id">' + item.id +'</div><div class="damage">' + item.damage +'</div><div class="cooldown">' + item.cooldown +'</div><div class="durability">' + item.durability +'</div><div class="enchantment">' + item.enchantment +'</div></div><div class="craft"></div></div>').appendTo('body').modal();
+				}
+			}
+	})
+	
 
 	//$.inArray( , weapons);
 });
