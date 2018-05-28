@@ -1,10 +1,11 @@
 $(document).ready(function() {
 	const weaponsBlock = $('.-weapons');
+	const searhResult = $('.found-content');
 	let modal = $('.modal');
 
 	let weapons = [
 		{
-			name: "лук",
+			name: "Деревянный Лук",
 			img: "assets/img/items/261-0.png",
 			id: "261-0",
 			damage: 1 ,
@@ -78,15 +79,31 @@ $(document).ready(function() {
 	})
 
 	$('.header-btn').click(function(){
-		var x = document.getElementById("search").value;
-			for(var i = 0; i < weapons.length; i++) {
-				if(weapons[i].name == x) {
-					let item = weapons[i];
-					$('<div class="modal"><div class="items-name">' + item.name + '</div><div class="items-icon"><img src="' + item.img +'"></div><div class="stats"><div class="id">' + item.id +'</div><div class="damage">' + item.damage +'</div><div class="cooldown">' + item.cooldown +'</div><div class="durability">' + item.durability +'</div><div class="enchantment">' + item.enchantment +'</div></div><div class="craft"></div></div>').appendTo('body').modal();
-				}
+		let items = [];
+		let searchText = new RegExp($('.js-search').val());
+
+
+		for (let i = 0; i < weapons.length; i++) {
+			if (weapons[i].name.search(searchText) !== -1) {
+				items.push(weapons[i]);
 			}
+		}
+
+
+		if (items.length < 1) {
+			alert('Совпадений нет')
+		}	else if (items.length == 1){
+			let item = items[0];
+			$('<div class="modal"><div class="items-name">' + item.name + '</div><div class="items-icon"><img src="' + item.img +'"></div><div class="stats"><div class="id">' + item.id +'</div><div class="damage">' + item.damage +'</div><div class="cooldown">' + item.cooldown +'</div><div class="durability">' + item.durability +'</div><div class="enchantment">' + item.enchantment +'</div></div><div class="craft"></div></div>').appendTo('body').modal();
+		} else {
+			searhResult.html('');
+			$('.found').addClass('-active');
+			for (let i = 0; i < items.length; i++) {
+				searhResult.append('<div class="item"><img class="items-icon" src="' + items[i].img + '"><div class="items-name">' + items[i].name +'</div><div class="items-ID">' + items[i].id + '</div></div>')
+			};
+		}
 	})
 	
-
+// $('<div class="modal"><div class="items-name">' + item.name + '</div><div class="items-icon"><img src="' + item.img +'"></div><div class="stats"><div class="id">' + item.id +'</div><div class="damage">' + item.damage +'</div><div class="cooldown">' + item.cooldown +'</div><div class="durability">' + item.durability +'</div><div class="enchantment">' + item.enchantment +'</div></div><div class="craft"></div></div>').appendTo('body').modal();
 	//$.inArray( , weapons);
 });

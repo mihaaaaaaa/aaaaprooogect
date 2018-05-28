@@ -22,10 +22,7 @@ header {
 	width: 10%;
 }
 
-.header-right{
-
-}
-
+.found-name,
 .item-list-name{
 	border: 2px solid red;
 	font-size: 35px;
@@ -34,10 +31,21 @@ header {
 	background-color: #53ea93;
 }
 
+.found{
+	transform: translateY(-300%);
+	opacity: 0;
+}
+
+.found,
 .item-list{
 	border: 2px solid #ccc;
 	background-color: ;
 	margin: 20px 20px 20px 20px; 
+}
+
+.found.-active{
+	transform: translateY(0);
+	opacity: 1;
 }
 
 .item{
