@@ -50,13 +50,15 @@ header {
 
 .item{
 	display: inline-block;
-	width: 5%;
-	height: 5vh;
-	min-width:200px;
+	height: 200px;
+	min-width: 262px;
 	border: 2px solid #ccc;
 	border-radius: 7px;
 	margin:0 50px 35px 50px;
 	padding-top: 80px;
+
+	text-align: center;
+	background-color: #f4f4f4;
 }
 
 .item:hover{
@@ -68,10 +70,8 @@ header {
 .items-icon {
 	justify-content: center;
 	background-size: cover;
-	padding:0 40px 10px 10px;
 	background-repeat: no-repeat;
 	width: 45px;
-	margin: 0 0 10% 20%;
 }
 
 .items-name{
@@ -84,19 +84,11 @@ header {
 	font-size: 20px;
 }
 
-.scrol-up{
-	position: absolute;
-	right: 20px;
-	bottom: 50px;
-	width:80px ;
-	height: 80px;
-	background-repeat: no-repeat;
-	background-image: url(../img/scrol-up.png);
-	background-color:#53ea93; 
-}
-
-@media screen and (min-width:768px) {
-	.item{
-		height: 20vh;
-	}
+.item-image-container {
+	padding: 10px;
+	background-color: white;
+	border-radius: 4px;
+	text-align: center;
+	width: 65px;
+	margin: 0 auto 15px;
 }
